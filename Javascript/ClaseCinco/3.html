@@ -109,6 +109,7 @@
           disponible: true,
         },
       ];
+
       const main = document.getElementsByTagName("main")[0];
       
       const crearYAgregarProducto = (producto)=> {
@@ -135,15 +136,18 @@
       }
 
 
-      const filtrarProductosDisponibles = (productos) => {
-        return productos.filter((item)=> item.disponible)
+      const filtradoGeneral = (productos) => {
+       const disponibles = productos.filter((item)=> item.disponible)
+
+       const ordenados = disponibles.sort((a, b) => b.precio - a.precio)
+
+       return ordenados
       }
 
-      const productosDisponibles = filtrarProductosDisponibles(productos);
+      const filtradoGlobal = filtradoGeneral(productos)
 
-
-      for (let i = 0; i < productosDisponibles.length; i++) {
-        crearYAgregarProducto(productosDisponibles[i]);
+      for (let i = 0; i < filtradoGlobal.length; i++) {
+        crearYAgregarProducto(filtradoGlobal[i]);
       }
     </script>
   </body>
