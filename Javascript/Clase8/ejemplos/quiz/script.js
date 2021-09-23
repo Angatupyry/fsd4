@@ -96,3 +96,22 @@ submitBtn.addEventListener("click", () => {
     }
   }
 });
+
+api = new Api();
+const getApi = async () => {
+  try {
+    const resolve = {};
+    const response = await api.get();
+
+    for (let i = 0; i < response.data; i++) {
+      resolve = {
+        name: response.data[i].name,
+        game: response.data[i].game,
+      };
+    }
+
+    return resolve;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
