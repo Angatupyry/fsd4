@@ -1,0 +1,19 @@
+{
+    "tareas": [
+        {
+            "titulo": "Estudiar",
+            "prioridad": "prioridad-alta",
+            "id": 0
+        },
+        {
+            "titulo": "Hacer ejercicio",
+            "prioridad": "prioridad-alta",
+            "id": 1
+        },
+        {
+            "titulo": "Practicar guitarra",
+            "prioridad": "prioridad-media",
+            "id": 2
+        }
+    ]
+}
